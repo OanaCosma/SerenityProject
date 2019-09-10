@@ -12,6 +12,7 @@ public class Constants {
         public static final String TOWN="Targu-Neamt";
         public static final String COUNTY="Neamt";
         public static final String POSTCODE="615200";
+        public static final String PHONE="0740628995";
 
 
 
