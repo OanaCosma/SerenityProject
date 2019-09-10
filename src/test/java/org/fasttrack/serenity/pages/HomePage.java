@@ -6,7 +6,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 
 
-@DefaultUrl("http://qa1.fasttrackit.org:8008/")
+@DefaultUrl("http://qa5.fasttrackit.org:8008/")
 public class HomePage extends PageObject {
     @FindBy(css=".menu a[href*='my-account']")
     private WebElementFacade myAccountLink;

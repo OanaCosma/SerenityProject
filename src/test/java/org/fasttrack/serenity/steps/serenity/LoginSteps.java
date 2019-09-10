@@ -12,8 +12,7 @@ public class LoginSteps {
     @Step
     public void navigateToLoginPage(){
         homePage.open();
-        homePage.clickMyAccount();
-        homePage.clickLogInLink();
+        homePage.clickMyAccountLink();
     }
 
     @Step
