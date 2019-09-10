@@ -1,6 +1,9 @@
 package org.fasttrack.serenity.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
+import org.fasttrack.serenity.pages.HomePage;
+import org.fasttrack.serenity.pages.SearchPage;
+import org.fasttrack.serenity.pages.ShopPage;
 import org.junit.Assert;
 
 public class SearchSteps {

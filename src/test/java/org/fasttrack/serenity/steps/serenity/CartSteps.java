@@ -1,9 +1,7 @@
 package org.fasttrack.serenity.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
-import org.fasttrack.serenity.pages.CartPage;
-import org.fasttrack.serenity.pages.HomePage;
-import org.fasttrack.serenity.pages.ShopPage;
+import org.fasttrack.serenity.pages.*;
 import org.junit.Assert;
 
 public class CartSteps {

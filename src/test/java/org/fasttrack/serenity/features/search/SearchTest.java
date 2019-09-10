@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
+
 @RunWith(SerenityRunner.class)
 public class SearchTest {
     @Managed(uniqueSession = true)
@@ -21,7 +22,7 @@ public class SearchTest {
     @Steps
     private SearchSteps searchSteps;
 
-    private String keyword="beanie";
+    private String keyword="hoodie";
 
     @Test
     public void searchForAValidKeywordTest(){

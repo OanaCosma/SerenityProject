@@ -3,7 +3,7 @@ package org.fasttrack.serenity.features.search;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
-import org.fasttrack.serenity.steps.serenity.LoginSteps;
+import org.fasttrack.serenity.steps.serenity.RegisterSteps;
 import org.fasttrack.serenity.utils.Constants;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,28 +11,29 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
-public class LoginTest {
+public class RegisterTest {
     @Managed(uniqueSession = true)
     private WebDriver driver;
     @Before
     public void maximizeWindow(){
         driver.manage().window().maximize();
     }
+
     @Steps
-    private LoginSteps loginSteps;
+    private RegisterSteps registerSteps;
 
     @Test
-    public void validLoginTest(){
-        loginSteps.navigateToLoginPage();
-        loginSteps.performLogin(Constants.USER_EMAIL, Constants.USER_PASSWORD);
-        loginSteps.checkLoggedIn(Constants.USER_NAME);
+    public void validRegister(){
+        registerSteps.navigateToRegisterPage();
+        registerSteps.performRegister(Constants.USER_EMAIL, Constants.USER_PASSWORD);
+        registerSteps.checkRegistered();
     }
+
     @Test
-    public void invalidUserNameLoginTest() {
-        loginSteps.navigateToLoginPage();
-        loginSteps.performLogin("oanav94@yahoo.com", Constants.USER_PASSWORD);
-        loginSteps.checkNotLoggedInInvalidUserName();
+    public void registerTwiceWithTheSameEmailTest() {
+        registerSteps.navigateToRegisterPage();
+        registerSteps.performRegister(Constants.USER_EMAIL, Constants.USER_PASSWORD);
+        registerSteps.checkNotRegisterTwiceSameEmail();
     }
 }
-
 
