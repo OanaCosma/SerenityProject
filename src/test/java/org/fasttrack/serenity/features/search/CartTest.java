@@ -25,14 +25,14 @@ public class CartTest {
     private CartSteps cartSteps;
 
 
-    private String keyword="beanie";
-    private String quantity="5";
+    private String keyword="belt";
+    private String quantity="2";
+
 
     @Test
     public void addProductToCartTest(){
         shopSteps.navigateToShopPage();
         cartSteps.searchForKeyword(keyword);
-        cartSteps.chooseFirstProduct();
         cartSteps.addToCartProduct();
         cartSteps.navigateToCartPage();
         cartSteps.checkProductinCart();
@@ -41,7 +41,6 @@ public class CartTest {
     public void removeTheProductFromCartTest(){
         shopSteps.navigateToShopPage();
         cartSteps.searchForKeyword(keyword);
-        cartSteps.chooseFirstProduct();
         cartSteps.addToCartProduct();
         cartSteps.navigateToCartPage();
         cartSteps.checkProductinCart();
@@ -52,7 +51,7 @@ public class CartTest {
     @Test
     public void verifyTotalPriceCalculationTest(){
         shopSteps.navigateToShopPage();
-        shopSteps.sortShopProductsByDate();
+        shopSteps.sortShopProductsByNewness();
         shopSteps.addProductToCart();
         shopSteps.navigateToCartPage();
         cartSteps.updateProductQuantityInCart(quantity);

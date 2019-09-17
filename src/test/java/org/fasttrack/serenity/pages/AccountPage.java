@@ -5,7 +5,7 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 
-@DefaultUrl("http://qa5.fasttrackit.org:8008/my-account/")
+@DefaultUrl("http://qa5.fasttrackit.org:8008/")
 public class AccountPage extends PageObject {
     @FindBy(css=".woocommerce-MyAccount-content p:first-child")
     private WebElementFacade helloText;

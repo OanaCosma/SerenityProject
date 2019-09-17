@@ -20,8 +20,8 @@ public class ShopSteps {
                 shopPage.verifyAddToCartButtonsAreVisible());
     }
     @Step
-    public void sortShopProductsByDate(){
-        shopPage.sortProductsByDate();
+    public void sortShopProductsByNewness(){
+        shopPage.sortProductsByNewness();
     }
     @Step
     public void addProductToCart(){

@@ -29,4 +29,5 @@ public class SearchSteps {
     public void checkNothingFoundSearchResultMessage(){
         Assert.assertTrue(searchPage.verifyNothingFoundSearchResultMessage());
     }
+
 }

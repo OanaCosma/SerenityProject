@@ -22,19 +22,20 @@ public class SearchTest {
     @Steps
     private SearchSteps searchSteps;
 
-    private String keyword="hoodie";
+    private String keyword="cap";
+    private String keyword1="brush";
 
     @Test
     public void searchForAValidKeywordTest(){
         searchSteps.navigateToShopPage();
         searchSteps.searchForKeyword(keyword);
-        searchSteps.checkSearchResultMessage(keyword);
+
     }
     @Test
     public void searchForANonValidKeywordTest(){
         searchSteps.navigateToShopPage();
-        searchSteps.searchForKeyword(keyword);
-        searchSteps.checkNothingFoundSearchResultMessage();
+        searchSteps.searchForKeyword(keyword1);
+
     }
 
 }

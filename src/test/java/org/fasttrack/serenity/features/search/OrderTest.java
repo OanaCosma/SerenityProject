@@ -34,24 +34,18 @@ public class OrderTest {
     private String keyword="album";
 
     @Test
-    public void productOrderSavedInOrdersPageTest(){
+    public void orderProduct(){
         loginSteps.navigateToLoginPage();
         loginSteps.performLogin(Constants.USER_EMAIL, Constants.USER_PASSWORD);
         loginSteps.checkLoggedIn(Constants.USER_NAME);
         cartSteps.searchForKeyword(keyword);
-        cartSteps.chooseFirstProduct();
         cartSteps.addToCartProduct();
         cartSteps.navigateToCartPage();
         checkoutSteps.placeOrderProduct(Constants.FIRST_NAME, Constants.LAST_NAME,Constants.COUNTRY,
                 Constants.STREET_ADDRESS, Constants.TOWN, Constants.COUNTY, Constants.POSTCODE,
                 Constants.PHONE, Constants.USER_EMAIL);
 
-        checkoutSteps.verifyProductPlacedInOrder();
-        ordersSteps.navigateToMyAccountPage();
-        ordersSteps.verifyUserName(Constants.USER_NAME);
-        ordersSteps.navigateToOrdersPage();
-        ordersSteps.navigateToViewOrderPage();
-        ordersSteps.compareProductName();
+
     }
 
 }

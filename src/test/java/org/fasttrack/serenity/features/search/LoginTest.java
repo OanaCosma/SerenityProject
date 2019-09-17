@@ -24,13 +24,13 @@ public class LoginTest {
     @Test
     public void validLoginTest(){
         loginSteps.navigateToLoginPage();
-        loginSteps.performLogin(Constants.USER_EMAIL, Constants.USER_PASSWORD);
+        loginSteps.performLogin(Constants.USER_EMAIL,Constants.USER_PASSWORD);
         loginSteps.checkLoggedIn(Constants.USER_NAME);
     }
     @Test
     public void invalidUserNameLoginTest() {
         loginSteps.navigateToLoginPage();
-        loginSteps.performLogin("oanav94@yahoo.com", Constants.USER_PASSWORD);
+        loginSteps.performLogin("oana", Constants.USER_PASSWORD);
         loginSteps.checkNotLoggedInInvalidUserName();
     }
 }

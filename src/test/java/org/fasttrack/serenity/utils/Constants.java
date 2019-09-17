@@ -10,7 +10,7 @@ public class Constants {
         public static final String COUNTRY="Romania";
         public static final String STREET_ADDRESS="Caprioarei, nr. 2";
         public static final String TOWN="Targu-Neamt";
-        public static final String COUNTY="Neamt";
+        public static final String COUNTY="Neamț";
         public static final String POSTCODE="615200";
         public static final String PHONE="0740628995";
 
