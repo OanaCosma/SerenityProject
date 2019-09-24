@@ -26,7 +26,7 @@ public class CartTest {
 
 
     private String keyword="belt";
-    private String quantity="2";
+    private String quantity="7";
 
 
     @Test
@@ -37,6 +37,8 @@ public class CartTest {
         cartSteps.navigateToCartPage();
         cartSteps.checkProductinCart();
     }
+
+
     @Test
     public void removeTheProductFromCartTest(){
         shopSteps.navigateToShopPage();

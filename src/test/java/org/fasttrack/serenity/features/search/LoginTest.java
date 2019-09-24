@@ -27,12 +27,23 @@ public class LoginTest {
         loginSteps.performLogin(Constants.USER_EMAIL,Constants.USER_PASSWORD);
         loginSteps.checkLoggedIn(Constants.USER_NAME);
     }
+
+
     @Test
     public void invalidUserNameLoginTest() {
         loginSteps.navigateToLoginPage();
         loginSteps.performLogin("oana", Constants.USER_PASSWORD);
         loginSteps.checkNotLoggedInInvalidUserName();
     }
+    @Test
+    public void invalidLogInPassword(){
+        loginSteps.navigateToLoginPage();
+        loginSteps.performLogin(Constants.USER_EMAIL,"99");
+        loginSteps.verifyNotLoggedInIncorrectPassword();
+    }
+
+
+
 }
 
 

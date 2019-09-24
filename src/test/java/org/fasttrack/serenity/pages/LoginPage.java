@@ -18,6 +18,9 @@ public class LoginPage extends PageObject {
     private WebElementFacade errorUserNameLoginMessage;
     @FindBy(css=".widget.widget_meta li:nth-child(2) a")
     private WebElementFacade loginLink;
+    @FindBy(css="#post-7 > div > div > div > div > ul > li")
+    private WebElementFacade errorIncorrectPasswordMassage;
+
 
 
 
@@ -37,6 +40,10 @@ public class LoginPage extends PageObject {
     public boolean verifyLogout(){
         return loginLink.isCurrentlyVisible();
     }
+    public void checkNotLoggedInIncorrectPassword(){
+        errorIncorrectPasswordMassage.shouldContainText("ERROR");
+    }
+
 
 
 

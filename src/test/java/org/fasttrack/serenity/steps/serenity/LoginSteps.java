@@ -29,4 +29,10 @@ public class LoginSteps {
     public void checkNotLoggedInInvalidUserName(){
         loginPage.verifyNotLoggedInInvalidUserName();
     }
-}
+    @Step
+    public void verifyNotLoggedInIncorrectPassword(){
+        loginPage.checkNotLoggedInIncorrectPassword();
+    }
+
+
+    }

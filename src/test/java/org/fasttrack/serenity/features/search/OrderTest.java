@@ -34,7 +34,7 @@ public class OrderTest {
     private String keyword="album";
 
     @Test
-    public void orderProduct(){
+    public void placeOrderProduct(){
         loginSteps.navigateToLoginPage();
         loginSteps.performLogin(Constants.USER_EMAIL, Constants.USER_PASSWORD);
         loginSteps.checkLoggedIn(Constants.USER_NAME);

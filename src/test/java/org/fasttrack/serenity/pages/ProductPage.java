@@ -19,4 +19,5 @@ public class ProductPage extends PageObject {
         clickOn(viewCartButton);
     }
 
+
 }

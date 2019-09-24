@@ -25,6 +25,11 @@ public class CartSteps {
     public void addToCartProduct(){
         productPage.clickAddToCartButton();
     }
+
+    @Step
+    public void addToCartSecondProduct(){
+        productPage.clickAddToCartButton();
+    }
     @Step
     public void navigateToCartPage() {
         productPage.clickViewCartButton();
@@ -53,5 +58,6 @@ public class CartSteps {
     public void verifyCartIsEmpty(){
         Assert.assertTrue("The product is not removed form the cart",cartPage.checkCartEmpty());
     }
+
 
 }

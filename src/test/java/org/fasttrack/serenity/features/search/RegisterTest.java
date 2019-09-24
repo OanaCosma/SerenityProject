@@ -28,7 +28,7 @@ public class RegisterTest {
     @Test
     public void validRegister(){
         registerSteps.navigateToRegisterPage();
-        registerSteps.performRegister(Constants.USER_EMAIL, Constants.USER_PASSWORD);
+        registerSteps.performRegister("fasttrackit@yahoo.com", Constants.USER_PASSWORD);
         registerSteps.checkRegistered();
     }
 

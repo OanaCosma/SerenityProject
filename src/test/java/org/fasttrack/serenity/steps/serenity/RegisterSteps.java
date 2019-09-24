@@ -23,7 +23,7 @@ public class RegisterSteps {
     }
     @Step
     public void checkRegistered(){
-        Assert.assertFalse(registerPage.verifyRegister());
+        Assert.assertTrue(registerPage.verifyRegister());
     }
 
     @Step
